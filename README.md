@@ -6,6 +6,7 @@ Sie zeigt ausschließlich die Cover-Seite des Raspberry-Pi-Radios:
 
 ```text
 http://<PI-IP>:8080/cover
+```
 
 ## BBuzzCanvas
 
