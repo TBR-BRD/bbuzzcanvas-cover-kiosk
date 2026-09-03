@@ -7,29 +7,52 @@ on:
       - main
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Java 17
+      - name: Set up Java
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 17
+          java-version: '17'
 
-      - name: Gradle
-        uses: gradle/actions/setup-gradle@v4
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v6
         with:
-          gradle-version: 8.7
+          gradle-version: '8.7'
 
-      - name: Build APK
-        run: gradle assembleDebug
+      - name: Build APK with retry
+        shell: bash
+        run: |
+          set +e
+
+          for attempt in 1 2 3 4 5
+          do
+            echo "========================================"
+            echo "Build attempt $attempt of 5"
+            echo "========================================"
+
+            gradle --no-daemon assembleDebug
+            RESULT=$?
+
+            if [ $RESULT -eq 0 ]; then
+              echo "APK build successful."
+              exit 0
+            fi
+
+            if [ $attempt -eq 5 ]; then
+              echo "Build failed after 5 attempts."
+              exit $RESULT
+            fi
+
+            WAIT=$((attempt * 60))
+            echo "Build failed. Waiting ${WAIT}s before retry..."
+            sleep $WAIT
+          done
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
