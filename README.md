@@ -14,6 +14,10 @@ http://<PI-IP>:8080/cover
 
 Das BBuzzCanvas wird mit einer kleinen Android-Kiosk-App als zusätzliches Fullscreen-Coverdisplay verwendet.
 
+![BBuzzCanvas Digital Art Display](docs/media/bbuzzart-cover-1.jpeg)
+
+Das BBuzzCanvas im Betrieb.
+
 Die App zeigt ausschließlich die Cover-Seite des Raspberry-Pi-Radios:
 
 `http://<PI-IP>:8080/cover`
