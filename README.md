@@ -9,9 +9,7 @@ http://<PI-IP>:8080/cover
 
 ## BBuzzCanvas
 
-<p align="center">
-  <img src="docs/media/bbuzzcanvas.png" alt="BBuzzCanvas Digital Art Display" width="650">
-</p>
+![BBuzzCanvas Digital Art Display](docs/media/bbuzzcanvas.png)
 
 Das BBuzzCanvas wird mit einer kleinen Android-Kiosk-App als zusätzliches Fullscreen-Coverdisplay verwendet.
 
