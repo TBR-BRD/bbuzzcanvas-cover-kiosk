@@ -1,5 +1,7 @@
 # BBuzzCanvas Cover Kiosk
 
+🇩🇪 Deutsch · [🇬🇧 English](README_EN.md)
+
 ![Android](https://img.shields.io/badge/Android-5.1-3DDC84?logo=android&logoColor=white)
 ![Kiosk](https://img.shields.io/badge/Mode-Fullscreen%20Kiosk-222222)
 ![WebView](https://img.shields.io/badge/UI-Android%20WebView-4285F4)
