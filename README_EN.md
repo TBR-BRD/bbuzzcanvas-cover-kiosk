@@ -11,6 +11,12 @@ Android 5.1-compatible kiosk app that turns a BBuzzCanvas into an additional ful
 
 The app only shows the cover page provided by the Raspberry Pi, in full screen.
 
+<br>
+<a href="https://www.buymeacoffee.com/thoralf.brandt" target="_blank">
+  <img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174">
+</a>
+<br>
+
 ## BBuzzCanvas
 
 ![BBuzzCanvas digital art display](docs/media/bbuzzcanvas.png)
